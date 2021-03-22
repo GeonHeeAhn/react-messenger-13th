@@ -82,6 +82,6 @@ PR 보내실땐 양식 맞춰주시고, 이번주 부터는 배포한 링크까�
 - [create react app (CRA)](https://create-react-app.dev/docs/getting-started/)
 - [리액트 docs 주요 개념 1-12](https://ko.reactjs.org/docs/hello-world.html)
 - [리액트 docs Hook 1-3](https://ko.reactjs.org/docs/hooks-intro.html)
-- [컴포넌트 네이밍을 위한 자바스크립트 네이밍 컨벤션](https://ui.toast.com/fe-guide/ko_CODING-CONVENSION/#%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99)
+- [컴포넌트 네이밍을 위한 자바스크립트 네이밍 컨벤션](https://velog.io/@cada/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%ED%83%80%EC%9D%BC-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EC%BB%A8%EB%B2%A4%EC%85%98-%ED%8E%B8)
 - [useState, useEffect hooks](https://velog.io/@velopert/react-hooks#1-usestate)
 - [styled-component](https://styled-components.com/docs/basics#getting-started)
