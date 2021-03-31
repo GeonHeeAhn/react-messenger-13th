@@ -68,8 +68,10 @@ function App() {
       chatData.push({
         chatText: message,
         userId: user,
-        proImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
+        profileImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
+        // profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
       });
+      console.log('chatData : ', chatData);
   }
   function handleChangeInput(e){
     setMessage(e.target.value);
