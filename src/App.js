@@ -12,43 +12,35 @@ const Continaer = styled.div`
 `;
 
 const chatData = [{
-  chatId: 0,
   chatText: "거니야",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, {
-  chatId: 1,
   chatText: "왜안와",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, 
 {
-  chatId: 2,
   chatText: "집 언제와ㅠㅡㅠ",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, {
-  chatId: 3,
   chatText: "헉 나 보고싶지 !! ",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
 }, {
-  chatId: 4,
   chatText: "아니 츄르",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 },{
-  chatId: 5,
   chatText: "아",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
 },{
-  chatId: 6,
   chatText: "얼른 와",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 },{
-  chatId: 7,
   chatText: "돈 벌어서 금방 갈게...",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
@@ -64,9 +56,24 @@ const profileData = [{
   proImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }];
 
+
 function App() {
   const [user, setUser] = useState(0);
   const {name, userId, proImg} = profileData[user]
+  const [message, setMessage] = useState();
+  function handleSubmit(e){
+      e.preventDefault();
+      //console.log(message);
+      setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
+      chatData.push({
+        chatText: message,
+        userId: user,
+        proImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
+      });
+  }
+  function handleChangeInput(e){
+    setMessage(e.target.value);
+  }
   const clickProfile = e =>{
     if(user===0 ) return setUser(1);
     else return setUser(0);
@@ -75,7 +82,7 @@ function App() {
     <Continaer>
       <Profile profileData = {profileData[user]} clickProfile = {clickProfile}/>
       <ChatList chatData={chatData}/>
-      <ChatInput/>
+      <ChatInput message = {message} handleChangeInput = {handleChangeInput} handleSubmit = {handleSubmit}/>
     </Continaer>
     );
 }

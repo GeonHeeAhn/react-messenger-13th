@@ -10,7 +10,7 @@ const ProfileItem = styled.div`
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-
+    
     border-bottom: 1.5px solid black;
     background-color: rgb(227, 200, 204);
     

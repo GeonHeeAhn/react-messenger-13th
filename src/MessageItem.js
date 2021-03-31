@@ -3,10 +3,11 @@ import styled, {css} from 'styled-components';
 const ChatItem = styled.div`
     display: flex;
     flex-direction: row;
-
+    margin-top: 5px;
     ${(props) =>
         props.isMine && // && 요게 참이면 아래거 해라
             css`flex-direction:row-reverse;`
+            
     }
 `;
 
@@ -19,6 +20,7 @@ const ProfileImg = styled.img`
 `;
 
 const ChatContent = styled.p`
+    border: 2px solid rgb(232, 180, 102);
     background-color: rgb(247, 193, 201);
     border-radius: 30px;
     padding: 5px;//이거 쓰면 프사랑 정렬이 안됨
