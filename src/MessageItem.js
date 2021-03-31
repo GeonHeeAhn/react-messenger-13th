@@ -12,10 +12,19 @@ const ChatItem = styled.div`
 
 const ProfileImg = styled.img`
     width:50px;
-    height:50px;    
+    height:50px;   
+    border-radius: 50%; 
+    margin:5px;
+    box-shadow: 5px 5px 20px 1px rgb(207, 195, 194);
 `;
 
 const ChatContent = styled.p`
+    background-color: rgb(247, 193, 201);
+    border-radius: 30px;
+    padding: 5px;//이거 쓰면 프사랑 정렬이 안됨
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 15px;
     
 `;
 

@@ -6,7 +6,7 @@ const Box = styled.div`
     flex-direction: row;
     height: 50px;
     width: 100%;
-    bottom: 0;
+    bottom: 0px;
     position: fixed;
 `;
 const Input = styled.input`

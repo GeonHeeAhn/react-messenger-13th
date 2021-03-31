@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React, {useState} from 'react';
 
 const ProfileItem = styled.div`
     display: flex;
@@ -10,8 +11,8 @@ const ProfileItem = styled.div`
     padding-top: 15px;
     padding-bottom: 15px;
 
-    border-bottom: 1px solid black;
-    background-color: rgb(255, 236, 204);
+    border-bottom: 1.5px solid black;
+    background-color: rgb(227, 200, 204);
     
 `;
 
@@ -40,17 +41,13 @@ const State = styled.div`
     font-size: 90%;
     margin-top: 15px;
 `;
-const isMine = 0;
+
 export default function(props){
-    let {name, userId, proImg} = props.profileData[0]
-    function handleClick(){
-        if (isMine === userId) return {name, userId, proImg} = props.profileData[1];
-        else return {name, userId, proImg} = props.profileData[0];
-    }
-    return <ProfileItem onClick= {handleClick}>
-        <ProfileImg src={proImg}/>
+    const user = props.user;
+    return <ProfileItem onClick= {props.clickProfile}>
+        <ProfileImg src={props.profileData.proImg}/>
         <NameItem>
-            <Name>{name}</Name>
+            <Name>{props.profileData.name}</Name>
             <State>현재 활동 중</State>
         </NameItem>
     </ProfileItem>
