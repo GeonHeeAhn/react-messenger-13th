@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-process.env.CI = false;
+
 const ChatItem = styled.div`
     display: flex;
     flex-direction: row;

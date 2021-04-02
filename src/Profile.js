@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-process.env.CI = false;
+
 
 const ProfileItem = styled.div`
     position: fixed;

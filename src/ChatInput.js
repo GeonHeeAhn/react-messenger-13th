@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-process.env.CI = false;
 const Box = styled.form`
     display: flex;
     flex-direction: row;
