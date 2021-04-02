@@ -4,12 +4,14 @@ import React, {useState} from 'react';
 const Box = styled.form`
     display: flex;
     flex-direction: row;
+    //justify-content: center;
     height: 50px;
     width: 100%;
     bottom: 0px;
     position: fixed;
 `;
 const Input = styled.input`
+    border-radius: 30px;
     flex-grow: 5;
     border: 1px solid rgb(204, 194, 180);
 `;
@@ -34,7 +36,7 @@ export default function ChatInput(props){
             <Input
                 type="text"
                 value={message}
-                placeholder = 'Message...'
+                placeholder = ' Message...'
                 onChange = {handleChangeInput}
             />
             <Button type="submit">전송</Button>
