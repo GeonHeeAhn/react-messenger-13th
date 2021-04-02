@@ -73,7 +73,7 @@ function App() {
     function check(e){
       const msg = e.target.value;
       if( msg== '' || msg== null){
-        alert('값을 입력해주세요');
+        alert("값을 입력해주세요");
         return false;
       }
     }
