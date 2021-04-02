@@ -3,7 +3,8 @@ import React from 'react';
 import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
-import {useState} from 'react';
+import {useState, useEffect, useRef} from 'react';
+import ReactDOM from 'react-dom';
 //데이터는 App에서 다룸
 
 const Continaer = styled.div`
@@ -61,15 +62,29 @@ function App() {
   const [user, setUser] = useState(0);
   const {name, userId, proImg} = profileData[user]
   const [message, setMessage] = useState();
+
+  // useEffect(() => {
+  //   console.log("제발 되라");
+  //   window.scrollBy(0, document.body.scrollHeight);
+  //   // document.getElementById('root').scrollBy(0, document.body.scrollHeight);
+  // }, [chatData]);
+
   function handleSubmit(e){
-      e.preventDefault();
-      //console.log(message);
-      setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
-      chatData.push({
-        chatText: message,
-        userId: user,
-        proImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
-      });
+    function check(e){
+      const msg = e.target.value;
+      if( msg== '' || msg== null){
+        alert('값을 입력해주세요');
+        return false;
+      }
+    }
+    e.preventDefault();
+    setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
+    chatData.push({
+      chatText: message,
+      userId: user,
+      profileImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
+    });
+    console.log('chatData : ', chatData);
   }
   function handleChangeInput(e){
     setMessage(e.target.value);

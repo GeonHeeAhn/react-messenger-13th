@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MessageItem from './MessageItem';
+import {useEffect} from 'react';
 
 const Container = styled.div`
     display: flex;
@@ -8,16 +9,24 @@ const Container = styled.div`
     overflow-x: hidden;
     position: fixed;
     width: 100%;
-    top: 100px;
+    top: 110px;
     bottom: 50px;
 `;
-export default function(props){
+export default function ChatList(props){
+   
     const {chatData} = props;
     const list = chatData.map((item) => {
         return <MessageItem chatItem={item} />
     });
+
+    // useEffect(() => {
+         //window.scrollBy(0, document.body.scrollHeight);
+        //  document.getElementById('root').scrollBy(0, document.body.scrollHeight);
+    // });
     
-    return <Container>
+    return (
+    <Container>
         {list /*이건 js*/}
     </Container>
+    );
 };
