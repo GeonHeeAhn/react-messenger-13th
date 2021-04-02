@@ -8,8 +8,7 @@ const ChatItem = styled.div`
     align-items: flex-end;
     ${(props) =>
         props.isMine && // && 요게 참이면 아래거 해라
-            css`flex-direction:row-reverse;`
-            
+            css`flex-direction:row-reverse;` 
     }
 `;
 
@@ -32,7 +31,7 @@ const ChatContent = styled.p`
     
 `;
 const ChatTime = styled.p`
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     font-size: 6px;
     font-style: grey;
 `;

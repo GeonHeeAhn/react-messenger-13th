@@ -6,9 +6,10 @@ const Box = styled.form`
     flex-direction: row;
     align-items: center;
     height: 70px;
-    width: 95%;
+    width: 100%;
     bottom: 0px;
     position: fixed;
+    background-color: rgb(237, 232, 234);
 `;
 const Input = styled.input`
     height: 50px;
@@ -26,6 +27,7 @@ const Button = styled.button`
     height: 50px;
     flex-grow: 1;
     margin-left: 10px;
+    margin-right: 5%;
     border-radius: 30px;
     background-color: rgb(222, 189, 164);
     border: none;

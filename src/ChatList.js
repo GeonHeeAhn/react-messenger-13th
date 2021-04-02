@@ -10,6 +10,7 @@ const Container = styled.div`
     width: 100%;
     top: 100px;
     bottom: 70px;
+    background-image: url("./heart_bg.png");
 `;
 export default function ChatList(props){
    
