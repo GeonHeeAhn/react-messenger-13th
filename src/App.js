@@ -70,7 +70,6 @@ function App() {
 
   useEffect(() => {
       window.scrollBy(0, document.body.scrollHeight);
-    //document.getElementById('root').scrollBy(0, document.body.scrollHeight);
   });
   
   function handleSubmit(e){

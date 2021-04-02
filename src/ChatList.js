@@ -8,7 +8,7 @@ const Container = styled.div`
     overflow-x: hidden;
     position: fixed;
     width: 100%;
-    top: 100px;
+    top: 120px;
     bottom: 70px;
     background-image: url("./heart_bg.png");
 `;
