@@ -4,9 +4,8 @@ import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
 import {useState, useEffect} from 'react';
-//데이터는 App에서 다룸
 
-const Continaer = styled.div`
+const Container = styled.div`
   display:flex;
   flex-direction:column;
 `;
@@ -70,20 +69,22 @@ function App() {
 
   useEffect(() => {
       window.scrollBy(0, document.body.scrollHeight);
-  });
+  }); //실행안됨
   
   function handleSubmit(e){
     e.preventDefault();
-     if ( message== ''|| message == null){
-       window.alert("값을 입력해주세요");
-       return false;
-     } 
+    if ( message== ''|| message == null){
+      window.alert("값을 입력해주세요");
+      return false;
+    } 
+
     setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
     var now = new Date();
     if(now.getMinutes() < 10){
       var minutes = "0" + now.getMinutes();
     } else var minutes = now.getMinutes();
     var time = now.getHours() + ":" + minutes;
+    
     chatData.push({
       currentTime: time,
       chatText: message,
@@ -103,11 +104,11 @@ function App() {
   }
 
   return (
-    <Continaer>
+    <Container>
       <Profile profileData = {profileData[user]} clickProfile = {clickProfile}/>
       <ChatList chatData={chatData}/>
       <ChatInput message = {message} handleChangeInput = {handleChangeInput} handleSubmit = {handleSubmit}/>
-    </Continaer>
+    </Container>
     );
 }
 

@@ -1,5 +1,4 @@
 import styled, {css} from 'styled-components';
-import ChatInput from './ChatInput';
 
 const ChatItem = styled.div`
     display: flex;
@@ -24,7 +23,7 @@ const ChatContent = styled.p`
     border: 2px solid rgb(232, 180, 102);
     background-color: rgb(247, 193, 201);
     border-radius: 30px;
-    padding: 5px;//이거 쓰면 프사랑 정렬이 안됨
+    padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 15px;

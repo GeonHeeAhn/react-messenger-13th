@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import App from './App';
 
 const ProfileItem = styled.div`
     position: fixed;
@@ -76,11 +75,13 @@ const Image = styled.img`
     width: 100px;
     height:98.5px;
 `;
+
 var now = new Date();
 if(now.getMinutes() < 10){
     var minutes = "0" + now.getMinutes();
 } else var minutes = now.getMinutes();
 var time = now.getHours() + ":" + minutes;
+
 export default function(props){
     const user = props.user;
     return <ProfileItem>

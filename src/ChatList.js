@@ -13,7 +13,6 @@ const Container = styled.div`
     background-image: url("./heart_bg.png");
 `;
 export default function ChatList(props){
-   
     const {chatData} = props;
     const list = chatData.map((item) => {
         return <MessageItem chatItem={item} />
@@ -21,7 +20,7 @@ export default function ChatList(props){
 
     return (
     <Container>
-        {list /*이건 js*/}
+        {list}
     </Container>
     );
 };

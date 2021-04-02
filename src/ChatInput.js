@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, {useState} from 'react';
+import React from 'react';
 
 const Box = styled.form`
     display: flex;
@@ -38,8 +38,7 @@ const Button = styled.button`
 `;
 
 export default function ChatInput(props){
-    const {msgTime,message,handleSubmit,handleChangeInput} = props;
-     //props는 input된 정보
+    const {message,handleSubmit,handleChangeInput} = props;
     return(
         <Box onSubmit = {handleSubmit}>
             <Input
@@ -47,7 +46,6 @@ export default function ChatInput(props){
                 value={message}
                 placeholder = ' Please enter a message'
                 onChange = {handleChangeInput}
-                //id = {msgTime}
             />
             <Button type="submit">전송</Button>
         </Box>
