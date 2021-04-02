@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import MessageItem from './MessageItem';
-import {useEffect} from 'react';
 
 const Container = styled.div`
     display: flex;
@@ -19,11 +18,6 @@ export default function ChatList(props){
         return <MessageItem chatItem={item} />
     });
 
-    // useEffect(() => {
-         //window.scrollBy(0, document.body.scrollHeight);
-        //  document.getElementById('root').scrollBy(0, document.body.scrollHeight);
-    // });
-    
     return (
     <Container>
         {list /*이건 js*/}

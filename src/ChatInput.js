@@ -36,7 +36,7 @@ const Button = styled.button`
 `;
 
 export default function ChatInput(props){
-    const {message,handleSubmit,handleChangeInput} = props;
+    const {msgTime,message,handleSubmit,handleChangeInput} = props;
      //props는 input된 정보
     return(
         <Box onSubmit = {handleSubmit}>
@@ -45,9 +45,9 @@ export default function ChatInput(props){
                 value={message}
                 placeholder = ' Please enter a message'
                 onChange = {handleChangeInput}
+                //id = {msgTime}
             />
             <Button type="submit">전송</Button>
         </Box>
     )
 }
-// export default MessageInput();

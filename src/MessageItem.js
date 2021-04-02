@@ -1,9 +1,11 @@
 import styled, {css} from 'styled-components';
+import ChatInput from './ChatInput';
 
 const ChatItem = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 5px;
+    align-items: flex-end;
     ${(props) =>
         props.isMine && // && 요게 참이면 아래거 해라
             css`flex-direction:row-reverse;`
@@ -29,12 +31,17 @@ const ChatContent = styled.p`
     margin: 15px;
     
 `;
-
+const ChatTime = styled.p`
+    padding-bottom: 8px;
+    font-size: 6px;
+    font-style: grey;
+`;
 export default function(props){
-    const {chatId, chatText, userId, profileImg} = props.chatItem
+    const {currentTime, chatText, userId, profileImg} = props.chatItem
 
     return <ChatItem isMine={userId == 0}>
         <ProfileImg src={profileImg} ></ProfileImg>
         <ChatContent>{chatText}</ChatContent>
+        <ChatTime>{currentTime}</ChatTime>
     </ChatItem>
 }; 

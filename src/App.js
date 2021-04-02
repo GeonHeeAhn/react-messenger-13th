@@ -12,35 +12,43 @@ const Continaer = styled.div`
 `;
 
 const chatData = [{
+  currentTime: "18: 23",
   chatText: "거니야",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, {
+  currentTime: "18: 23",
   chatText: "왜안와",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, 
 {
+  currentTime: "18: 24",
   chatText: "집 언제와ㅠㅡㅠ",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }, {
+  currentTime: "18: 25",
   chatText: "헉 나 보고싶지 !! ",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
 }, {
+  currentTime: "19: 40",
   chatText: "아니 츄르",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 },{
+  currentTime: "19: 48",
   chatText: "아",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
 },{
+  currentTime: "20: 05",
   chatText: "얼른 와",
   userId: 1,
   profileImg: process.env.PUBLIC_URL + 'profile2.jpg'
 },{
+  currentTime: "20: 54",
   chatText: "돈 벌어서 금방 갈게...",
   userId: 0,
   profileImg: process.env.PUBLIC_URL + 'profile1.jpg'
@@ -58,14 +66,13 @@ const profileData = [{
 
 function App() {
   const [user, setUser] = useState(0);
- // const {name, userId, proImg} = profileData[user]
   const [message, setMessage] = useState();
 
   useEffect(() => {
       window.scrollBy(0, document.body.scrollHeight);
     //document.getElementById('root').scrollBy(0, document.body.scrollHeight);
   });
-
+  
   function handleSubmit(e){
     e.preventDefault();
      if ( message== ''|| message == null){
@@ -73,7 +80,10 @@ function App() {
        return false;
      } 
     setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
+    var now = new Date();
+    var time = now.getHours() + ":" + now.getMinutes();
     chatData.push({
+      currentTime: time,
       chatText: message,
       userId: user,
       profileImg: process.env.PUBLIC_URL + `profile${user+1}.jpg`
