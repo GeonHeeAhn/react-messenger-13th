@@ -27,7 +27,7 @@ const Button = styled.button`
 `;
 
 export default function ChatInput(props){
-    const {message, handleSubmit,handleChangeInput} = props;
+    const {message,handleSubmit,handleChangeInput} = props;
      //props는 input된 정보
     return(
         <Box onSubmit = {handleSubmit}>

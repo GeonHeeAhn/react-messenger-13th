@@ -64,20 +64,16 @@ function App() {
   const [message, setMessage] = useState();
 
   // useEffect(() => {
-  //   console.log("제발 되라");
   //   window.scrollBy(0, document.body.scrollHeight);
   //   // document.getElementById('root').scrollBy(0, document.body.scrollHeight);
   // }, [chatData]);
 
   function handleSubmit(e){
-    function check(e){
-      const msg = e.target.value;
-      if( msg== '' || msg== null){
-        alert("값을 입력해주세요");
-        return false;
-      }
-    }
     e.preventDefault();
+    if( e.target.value== '' || e.target.value== null){
+      window.alert("값을 입력해주세요");
+      return false;
+    }
     setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
     chatData.push({
       chatText: message,
@@ -86,13 +82,16 @@ function App() {
     });
     console.log('chatData : ', chatData);
   }
+
   function handleChangeInput(e){
     setMessage(e.target.value);
   }
+
   const clickProfile = e =>{
     if(user===0 ) return setUser(1);
     else return setUser(0);
   }
+
   return (
     <Continaer>
       <Profile profileData = {profileData[user]} clickProfile = {clickProfile}/>
