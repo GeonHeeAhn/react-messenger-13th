@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { Component } from 'react';
 import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
@@ -66,11 +66,6 @@ const profileData = [{
 function App() {
   const [user, setUser] = useState(0);
   const [message, setMessage] = useState();
-
-  useEffect(() => {
-      window.scrollBy(0, document.body.scrollHeight);
-  }); //실행안됨
-  
   function handleSubmit(e){
     e.preventDefault();
     if ( message== ''|| message == null){

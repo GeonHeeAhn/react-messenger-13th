@@ -12,6 +12,7 @@ const Container = styled.div`
     bottom: 70px;
     background-image: url("./heart_bg.png");
 `;
+
 export default function ChatList(props){
     const {chatData} = props;
     const list = chatData.map((item) => {
