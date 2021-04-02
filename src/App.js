@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
 import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
-import {useState, useEffect} from 'react';
 
 const Container = styled.div`
   display:flex;
@@ -66,11 +65,6 @@ const profileData = [{
 function App() {
   const [user, setUser] = useState(0);
   const [message, setMessage] = useState();
-
-  useEffect(() => {
-      window.scrollBy(0, document.body.scrollHeight);
-  }); //실행안됨
-  
   function handleSubmit(e){
     e.preventDefault();
     if ( message== ''|| message == null){
@@ -82,7 +76,7 @@ function App() {
     var now = new Date();
     if(now.getMinutes() < 10){
       var minutes = "0" + now.getMinutes();
-    } else var minutes = now.getMinutes();
+    } else minutes = now.getMinutes();
     var time = now.getHours() + ":" + minutes;
     
     chatData.push({
