@@ -10,7 +10,7 @@ const Container = styled.div`
     position: fixed;
     width: 100%;
     top: 100px;
-    bottom: 50px;
+    bottom: 70px;
 `;
 export default function ChatList(props){
    

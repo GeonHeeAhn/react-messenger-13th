@@ -4,19 +4,26 @@ import React, {useState} from 'react';
 const Box = styled.form`
     display: flex;
     flex-direction: row;
-    //justify-content: center;
-    height: 50px;
-    width: 100%;
+    align-items: center;
+    height: 70px;
+    width: 95%;
     bottom: 0px;
     position: fixed;
 `;
 const Input = styled.input`
+    height: 50px;
     border-radius: 30px;
+    margin-left: 5%;
     flex-grow: 5;
     border: 1px solid rgb(204, 194, 180);
+    :focus{
+        border:  1px solid rgb(204, 194, 180);;
+        outline: none;
+    }
 `;
 
 const Button = styled.button`
+    height: 50px;
     flex-grow: 1;
     margin-left: 10px;
     border-radius: 30px;
@@ -36,7 +43,7 @@ export default function ChatInput(props){
             <Input
                 type="text"
                 value={message}
-                placeholder = ' Message...'
+                placeholder = ' Please enter a message'
                 onChange = {handleChangeInput}
             />
             <Button type="submit">전송</Button>
