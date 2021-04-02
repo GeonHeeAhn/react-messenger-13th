@@ -81,7 +81,10 @@ function App() {
      } 
     setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
     var now = new Date();
-    var time = now.getHours() + ":" + now.getMinutes();
+    if(now.getMinutes() < 10){
+      var minutes = "0" + now.getMinutes();
+    } else var minutes = now.getMinutes();
+    var time = now.getHours() + ":" + minutes;
     chatData.push({
       currentTime: time,
       chatText: message,
