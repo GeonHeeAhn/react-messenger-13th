@@ -9,7 +9,7 @@ const Container = styled.div`
     overflow-x: hidden;
     position: fixed;
     width: 100%;
-    top: 110px;
+    top: 100px;
     bottom: 50px;
 `;
 export default function ChatList(props){
