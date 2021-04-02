@@ -3,8 +3,7 @@ import React from 'react';
 import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
-import {useState, useEffect, useRef} from 'react';
-import ReactDOM from 'react-dom';
+import {useState, useEffect} from 'react';
 //데이터는 App에서 다룸
 
 const Continaer = styled.div`
@@ -57,23 +56,22 @@ const profileData = [{
   proImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }];
 
-
 function App() {
   const [user, setUser] = useState(0);
-  const {name, userId, proImg} = profileData[user]
+ // const {name, userId, proImg} = profileData[user]
   const [message, setMessage] = useState();
 
-  // useEffect(() => {
-  //   window.scrollBy(0, document.body.scrollHeight);
-  //   // document.getElementById('root').scrollBy(0, document.body.scrollHeight);
-  // }, [chatData]);
+  useEffect(() => {
+      window.scrollBy(0, document.body.scrollHeight);
+    //document.getElementById('root').scrollBy(0, document.body.scrollHeight);
+  });
 
   function handleSubmit(e){
     e.preventDefault();
-    if( e.target.value== '' || e.target.value== null){
-      window.alert("값을 입력해주세요");
-      return false;
-    }
+     if ( message== ''|| message == null){
+       window.alert("값을 입력해주세요");
+       return false;
+     } 
     setMessage('');  //chatdata를 useState으로 만들어서 다시 해보기
     chatData.push({
       chatText: message,
