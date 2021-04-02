@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import MessageItem from './MessageItem';
-
+process.env.CI = false;
 const Container = styled.div`
     display: flex;
     flex-direction: column; 
