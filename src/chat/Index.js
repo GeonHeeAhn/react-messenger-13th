@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import ChatInput from './ChatInput';
 import ChatList from './ChatList';
 import Profile from './Profile';
+
 const Container = styled.div`
   display:flex;
   flex-direction:column;
