@@ -8,11 +8,14 @@ const Screen = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
+    margin-left: 30px;
+    margin-top: 10px;
 `;
 
 export default function InfoScreen(){
     return(
         <Screen>
+            <h3>친구목록</h3>
             <Profile/>
             <FriendsList/>
         </Screen>

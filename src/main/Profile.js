@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const ProfileBox = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin-top: 10px;
 `;
 
 const NameItem = styled.div`
-    margin: 10px;
+    margin-top:10px;
+    margin-left: 20px;
 `;
 const ProfileImg = styled.img`
     width: 80px;
@@ -20,7 +21,7 @@ export default function Profile(props){
     return(
         <ProfileBox>
             <ProfileImg src={process.env.PUBLIC_URL + 'profile1.jpg'} />
-            <NameItem>안거닝</NameItem>
+            <NameItem><h3>안거닝</h3></NameItem>
         </ProfileBox>
     );
 }
