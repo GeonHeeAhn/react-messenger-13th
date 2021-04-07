@@ -61,7 +61,7 @@ const profileData = [{
   proImg: process.env.PUBLIC_URL + 'profile2.jpg'
 }];
 
-function App() {
+function Index() {
   const [user, setUser] = useState(0);
   const [message, setMessage] = useState();
   function handleSubmit(e){
@@ -105,4 +105,4 @@ function App() {
     );
 }
 
-export default App;
+export default Index;
