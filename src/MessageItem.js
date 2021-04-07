@@ -34,9 +34,9 @@ const ChatTime = styled.p`
     font-size: 6px;
     font-style: grey;
 `;
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function(props){
     const {currentTime, chatText, userId, profileImg} = props.chatItem
-
     return <ChatItem isMine={userId == 0}>
         <ProfileImg src={profileImg} ></ProfileImg>
         <ChatContent>{chatText}</ChatContent>
