@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
+  position: fixed;
   width: 70px;
   height: 100vh;
   background-color: rgb(66, 54, 48);

@@ -10,7 +10,7 @@ const Screen = styled.div`
     overflow-x: hidden;
     height: 100%;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 100px;
     margin-top: 10px;
 `;
 const Header = styled.div`
@@ -22,6 +22,7 @@ const Header = styled.div`
 `;
 const SearchButton = styled.button`
     margin-top: 15px;
+    margin-right: 30px;
     height: 30px;
     width: 30px;
     border: none;
