@@ -4,13 +4,15 @@ import Profile from './Profile';
 import {React, useState} from 'react';
 
 const Screen = styled.div`
+    position: fixed;
+    left: 70px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
-    width: 100%;
-    margin-left: 100px;
+    width: calc(100% - 100px); //후에 수정 : width 100%로 주면 버튼 사라짐
+    margin-left: 30px;
     margin-top: 10px;
 `;
 const Header = styled.div`
@@ -23,8 +25,9 @@ const Header = styled.div`
 const SearchButton = styled.button`
     margin-top: 15px;
     margin-right: 30px;
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 36px;
+    background:none;
     border: none;
     :focus{
         border: none;
@@ -34,26 +37,36 @@ const SearchButton = styled.button`
 
 const Input = styled.input`
     width: 90%;
-    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 10px;
     display: none;
+    border-radius: 30px;
+    border-color: rgb(207, 195, 194);
+    :focus{
+        outline:none;
+    }
     ${(props) =>
         props.isVisible &&
         css` display: inherit;`
     }
 `;
-
+const Img = styled.img`
+    width:100%;
+    height:100%;
+`;
 export default function InfoScreen(props){
     const [isVisibleSearch, setIsVisibleSearch] = useState(false);
     function toggleVisibleSearch(){
         setIsVisibleSearch(!isVisibleSearch);
-        
     };
 
     return(
         <Screen>
             <Header>
                 <h3>친구목록</h3>
-                <SearchButton onClick={toggleVisibleSearch}>Search</SearchButton>
+                <SearchButton onClick={toggleVisibleSearch}><Img src={process.env.PUBLIC_URL + 'search.png'}/></SearchButton>
             </Header>
             <Input isVisible ={isVisibleSearch}/>
             <Profile/>

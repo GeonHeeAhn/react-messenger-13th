@@ -4,6 +4,8 @@ const ProfileBox = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    padding-bottom: 20px;
+    box-shadow: -3px 6px 20px -10px rgb(207, 195, 194);
 `;
 
 const NameItem = styled.div`

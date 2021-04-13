@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SettingScreen from './SettingScreen';
 
 const Container = styled.div`
   display:flex;
@@ -9,6 +10,7 @@ const Container = styled.div`
 function Index(){
     return(
         <Container>
+          <SettingScreen/>
         </Container>
     );
 }
