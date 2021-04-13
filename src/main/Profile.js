@@ -20,10 +20,11 @@ const ProfileImg = styled.img`
 `;
 
 export default function Profile(props){
+    const {profileImg, name} = props.otherProfile;
     return(
         <ProfileBox>
-            <ProfileImg src={process.env.PUBLIC_URL + 'profile1.jpg'} />
-            <NameItem><h3>안거닝</h3></NameItem>
+            <ProfileImg src={profileImg}/>
+            <NameItem><h3>{name}</h3></NameItem>
         </ProfileBox>
     );
 }

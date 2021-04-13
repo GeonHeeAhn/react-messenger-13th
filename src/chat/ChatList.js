@@ -16,14 +16,14 @@ const Container = styled.div`
 
 export default function ChatList(props) {
   const { chatData } = props;
-  const cr = useRef();
+  const containerRef = useRef(null);
   const list = chatData.map((item) => {
     return <MessageItem chatItem={item} />;
   });
 
   useEffect(() => {
-    cr.current.scrollBy(0, 1000);
+    containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
   }, [list]);
 
-  return <Container ref={cr}>{list}</Container>;
+  return <Container ref={containerRef}>{list}</Container>;
 }

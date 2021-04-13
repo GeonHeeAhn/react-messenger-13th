@@ -36,7 +36,7 @@ export default function MenuBar() {
        <Link to="/">
           <Contents src={process.env.PUBLIC_URL + 'person.png'} />
        </Link>
-        <Link to="/chat">
+        <Link to="/chatlist">
           <Contents src={process.env.PUBLIC_URL + 'chat.png'} />
         </Link>
         <Link to="/setting">
