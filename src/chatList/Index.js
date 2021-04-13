@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Screen from './Screen';
 
 const Container = styled.div`
   display:flex;
@@ -6,9 +7,11 @@ const Container = styled.div`
   height: 100%;
 `;
 
-function Index(){
+function Index(props){
+  
     return(
         <Container>
+          <Screen {...props} />
         </Container>
     );
 }
