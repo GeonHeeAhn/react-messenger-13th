@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, useParams } from 'react-router-dom';
 import { chatData } from './Data';
 import Chat from './chat/Index';
 import Main from './main/Index';
@@ -12,6 +12,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+function ChatOutput(){
+  let {user} = useParams();
+  return <div> {user} </div>;
+}
 export default function App(props) {
   const [list, setList] = useState(chatData);
   return (
@@ -25,7 +30,9 @@ export default function App(props) {
 
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/chat" component={Chat} />
+          <Route path="/chatlist/:id" component={Chat} />
+          {/* <Route path="/chat/:user" component={Chat} />
+            <ChatOutput/> */}
           <Route
             path="/chatlist"
             render={(props) => <ChatList {...props} list={list} />}

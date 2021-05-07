@@ -28,6 +28,19 @@ const Img = styled.img`
   height: 100%;
 `;
 
+const SearchButton = styled.button`
+  margin-top: 15px;
+  margin-right: 30px;
+  height: 28px;
+  width: 36px;
+  background: none;
+  border: none;
+  :focus {
+    border: none;
+    outline: none;
+  }
+`;
+
 const ChatBox = styled.div`
   /* width:100%; */
   display: flex;
@@ -35,6 +48,25 @@ const ChatBox = styled.div`
   margin-top: 10px;
   padding-bottom: 20px;
   box-shadow: -3px 6px 20px -10px rgb(207, 195, 194);
+`;
+
+const Input = styled.input`
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 3px;
+  padding-left: 10px;
+  display: none;
+  border-radius: 30px;
+  border-color: rgb(207, 195, 194);
+  :focus {
+    outline: none;
+  }
+  ${(props) =>
+    props.isVisible &&
+    css`
+      display: inherit;
+    `}
 `;
 
 const NameItem = styled.div`
@@ -55,13 +87,41 @@ const LastChat = styled.div`
 `;
 export default function InfoScreen(props) {
   const list = props.list;
-  console.log(list);
+
+  // const [isVisibleSearch, setIsVisibleSearch] = useState(false);
+  // function toggleVisibleSearch() {
+  //   setIsVisibleSearch(!isVisibleSearch);
+  // }
+  // const [list2, setList2] = useState(list);
+  // const [searchText, setSearchText] = useState('');
+  // function setText(e) {
+  //   setSearchText(e.target.value);
+  // }
+  // useEffect(() => {
+  //   setList2(
+  //     userData.filter((item) => {
+  //       return item.name.includes(searchText);
+  //     })
+  //   );
+  // }, [searchText]);
+
   return (
     <Screen>
-      <Header>채팅방 목록</Header>
+      <Header>
+        <h3>채팅목록</h3>
+        {/* <SearchButton onClick={toggleVisibleSearch}>
+          <Img src={process.env.PUBLIC_URL + 'search.png'} />
+        </SearchButton> */}
+      </Header>
+      {/* <Input
+        isVisible={isVisibleSearch}
+        type="text"
+        value={searchText}
+        onChange={setText}
+      /> */}
       {list.map((item) => {
         return (
-          <Link to="/chat">
+          <Link to={`/chatlist/${item.user.id}`}>
             <ChatBox chattingRoom={item}>
               <ProfileImg src={item.user.profileImg} />
               <div>

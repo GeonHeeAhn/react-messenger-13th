@@ -19,7 +19,7 @@ export const userData = [
     profileImg: `${process.env.PUBLIC_URL}/profile1.jpg`,
   },
   {
-    name: '강아지',
+    name: '겸댕',
     id: 3,
     profileImg: `${process.env.PUBLIC_URL}/profile1.jpg`,
   },
@@ -39,5 +39,31 @@ export const chatData = [
         user: userData[1],
         text:'그렇게 하면 돼'
       }]
-  },
+  },{
+    user:userData[1],
+    id:1,
+    chatText:[{
+        user: userData[0],
+        text:'이렇게 하면 되나'
+    },{
+        user: userData[1],
+        text:'웅야'
+    },{
+      user: userData[1],
+      text:'그렇게 하면 돼'
+    }]
+},{
+  user:userData[2],
+  id:2,
+  chatText:[{
+      user: userData[2],
+      text:'이렇게 하면 되나'
+  },{
+      user: userData[1],
+      text:'웅야'
+  },{
+    user: userData[2],
+    text:'그렇게 하면 돼'
+  }]
+},
 ];

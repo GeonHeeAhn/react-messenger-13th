@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import MessageItem from './MessageItem';
 import { useEffect, useRef } from 'react';
+import {chatData} from '../Data';
 
 const Container = styled.div`
   display: flex;
@@ -15,9 +16,9 @@ const Container = styled.div`
 `;
 
 export default function ChatList(props) {
-  const { chatData } = props;
+  
   const containerRef = useRef(null);
-  const list = chatData.map((item) => {
+  const list = props.chatData.chatText.map((item) => {
     return <MessageItem chatItem={item} />;
   });
 
@@ -27,3 +28,17 @@ export default function ChatList(props) {
 
   return <Container ref={containerRef}>{list}</Container>;
 }
+// export default function ChatList(props) {
+//   const { chatData } = props;
+//   const containerRef = useRef(null);
+//   const list = chatData.map((item) => {
+//     return <MessageItem chatItem={item} />;
+//   });
+
+//   useEffect(() => {
+//     containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+//   }, [list]);
+
+//   return <Container ref={containerRef}>{list}</Container>;
+// }
+

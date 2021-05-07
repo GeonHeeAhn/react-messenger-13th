@@ -92,9 +92,9 @@ export default function (props) {
       </Header>
       <LeftThings onClick={props.clickProfile}>
         <ChangeableProfile>
-          <ProfileImg src={props.profileData.proImg} />
+          <ProfileImg src={props.userData.profileImg} />
           <NameItem>
-            <Name>{props.profileData.name}</Name>
+            <Name>{props.userData.name}</Name>
             <State>현재 활동 중</State>
           </NameItem>
         </ChangeableProfile>
@@ -103,3 +103,23 @@ export default function (props) {
     </ProfileItem>
   );
 }
+// export default function (props) {
+//   return (
+//     <ProfileItem>
+//       <Header>
+//         <Time>{time}</Time>
+//         <Battery src={process.env.PUBLIC_URL + 'battery.png'} />
+//       </Header>
+//       <LeftThings onClick={props.clickProfile}>
+//         <ChangeableProfile>
+//           <ProfileImg src={props.profileData.proImg} />
+//           <NameItem>
+//             <Name>{props.profileData.name}</Name>
+//             <State>현재 활동 중</State>
+//           </NameItem>
+//         </ChangeableProfile>
+//         <Image src={process.env.PUBLIC_URL + 'myMelody-profile.png'} />
+//       </LeftThings>
+//     </ProfileItem>
+//   );
+// }

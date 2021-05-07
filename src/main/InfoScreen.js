@@ -74,14 +74,14 @@ export default function InfoScreen(props) {
         return item.name.includes(searchText);
       })
     );
-    /* const newList = [];
+  }, [searchText]);
+     /* const newList = [];
 
     for (const item of userData) {
       if (item.name.includes(searchText)) newList.push(item);
     }
 
     setList(newList); */
-  }, [searchText]);
 
   return (
     <Screen>
