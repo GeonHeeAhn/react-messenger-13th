@@ -12,7 +12,7 @@ const Screen = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
-  width: calc(100% - 100px); //후에 수정 : width 100%로 주면 버튼 사라짐
+  width: calc(100% - 100px); 
   margin-left: 30px;
   margin-top: 10px;
 `;

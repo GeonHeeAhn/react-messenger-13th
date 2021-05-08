@@ -6,7 +6,7 @@ const Box = styled.form`
     flex-direction: row;
     align-items: center;
     height: 70px;
-    width: 100%;
+    width: calc(100% - 70px);
     bottom: 0px;
     position: fixed;
     background-color: rgb(237, 232, 234);

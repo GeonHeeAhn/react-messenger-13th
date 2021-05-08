@@ -29,6 +29,7 @@ const MiniContents = styled.img`
   margin-top:8px;
   margin-bottom:8px;
 `;
+
 export default function MenuBar() {
   return (
     <Container>

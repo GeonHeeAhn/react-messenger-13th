@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { userData } from '../Data';
+import { userData,chatData } from '../Data';
 import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -92,7 +92,7 @@ export default function InfoScreen(props) {
   // function toggleVisibleSearch() {
   //   setIsVisibleSearch(!isVisibleSearch);
   // }
-  // const [list2, setList2] = useState(list);
+  // const [list2, setList2] = useState(chatData.user);
   // const [searchText, setSearchText] = useState('');
   // function setText(e) {
   //   setSearchText(e.target.value);

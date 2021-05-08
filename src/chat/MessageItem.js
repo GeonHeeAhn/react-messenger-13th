@@ -37,17 +37,10 @@ const ChatTime = styled.p`
 `;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function(props){
-    const {user, id, text} = props.chatItem
+    const {currentTime, user, id, text} = props.chatItem
     return <ChatItem isMine={user.id === 0}>
         <ProfileImg src={user.profileImg} ></ProfileImg>
         <ChatContent>{text}</ChatContent>
+        <ChatTime>{currentTime}</ChatTime>
     </ChatItem>
 }; 
-// export default function(props){
-//     const {currentTime, chatText, userId, profileImg} = props.chatItem
-//     return <ChatItem isMine={userId == 0}>
-//         <ProfileImg src={profileImg} ></ProfileImg>
-//         <ChatContent>{chatText}</ChatContent>
-//         <ChatTime>{currentTime}</ChatTime>
-//     </ChatItem>
-// }; 

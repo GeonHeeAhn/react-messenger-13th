@@ -31,12 +31,15 @@ export const chatData = [
       id:0,
       chatText:[{
           user: userData[0],
+          currentTime: '20:01',
           text:'이렇게 하면 되나'
       },{
           user: userData[1],
+          currentTime: '20:01',
           text:'웅야'
       },{
         user: userData[1],
+        currentTime: '20:01',
         text:'그렇게 하면 돼'
       }]
   },{
@@ -44,12 +47,15 @@ export const chatData = [
     id:1,
     chatText:[{
         user: userData[0],
+        currentTime: '20:01',
         text:'이렇게 하면 되나'
     },{
         user: userData[1],
+        currentTime: '20:01',
         text:'웅야'
     },{
       user: userData[1],
+      currentTime: '20:01',
       text:'그렇게 하면 돼'
     }]
 },{
@@ -57,12 +63,15 @@ export const chatData = [
   id:2,
   chatText:[{
       user: userData[2],
+      currentTime: '20:01',
       text:'이렇게 하면 되나'
   },{
       user: userData[1],
+      currentTime: '20:01',
       text:'웅야'
   },{
     user: userData[2],
+    currentTime: '20:01',
     text:'그렇게 하면 돼'
   }]
 },

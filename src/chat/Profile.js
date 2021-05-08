@@ -4,7 +4,7 @@ import React from 'react';
 const ProfileItem = styled.div`
   position: fixed;
   top: 0px;
-  width: 100%;
+  width: calc(100% - 70px);
   display: flex;
   flex-direction: column;
 `;
@@ -103,23 +103,3 @@ export default function (props) {
     </ProfileItem>
   );
 }
-// export default function (props) {
-//   return (
-//     <ProfileItem>
-//       <Header>
-//         <Time>{time}</Time>
-//         <Battery src={process.env.PUBLIC_URL + 'battery.png'} />
-//       </Header>
-//       <LeftThings onClick={props.clickProfile}>
-//         <ChangeableProfile>
-//           <ProfileImg src={props.profileData.proImg} />
-//           <NameItem>
-//             <Name>{props.profileData.name}</Name>
-//             <State>현재 활동 중</State>
-//           </NameItem>
-//         </ChangeableProfile>
-//         <Image src={process.env.PUBLIC_URL + 'myMelody-profile.png'} />
-//       </LeftThings>
-//     </ProfileItem>
-//   );
-// }

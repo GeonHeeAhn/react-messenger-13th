@@ -13,26 +13,18 @@ const Container = styled.div`
   flex-direction: row;
 `;
 
-function ChatOutput(){
-  let {user} = useParams();
-  return <div> {user} </div>;
-}
 export default function App(props) {
   const [list, setList] = useState(chatData);
   return (
     <Router>
       <Container>
         <Link to="/"></Link>
-        <Link to="/chat"></Link>
         <Link to="/chatlist"></Link>
         <Link to="/setting"></Link>
         <Route path={['/', '/chatlist', '/setting']} component={MenuBar} />
-
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/chatlist/:id" component={Chat} />
-          {/* <Route path="/chat/:user" component={Chat} />
-            <ChatOutput/> */}
           <Route
             path="/chatlist"
             render={(props) => <ChatList {...props} list={list} />}
