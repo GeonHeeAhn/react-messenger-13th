@@ -47,7 +47,6 @@ const ChatBox = styled.div`
   flex-direction: row;
   margin-top: 10px;
   padding-bottom: 20px;
-  box-shadow: -3px 6px 20px -10px rgb(207, 195, 194);
 `;
 
 const Input = styled.input`
@@ -125,9 +124,9 @@ export default function InfoScreen(props) {
             <ChatBox chattingRoom={item}>
               <ProfileImg src={item.user.profileImg} />
               <div>
-                <NameItem>{item.user.name}</NameItem>
+                <NameItem><h4 style={{marginTop: 0 + 'px'}}>{item.user.name}</h4></NameItem>
                 <LastChat>
-                  {item.chatText[item.chatText.length - 1].text}
+                  <h5 style={{fontWeight: 'lighter'},{marginTop: 0 + 'px'}}>{item.chatText[item.chatText.length - 1].text}</h5>
                 </LastChat>
               </div>
             </ChatBox>
