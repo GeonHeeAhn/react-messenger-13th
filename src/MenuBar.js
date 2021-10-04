@@ -7,10 +7,10 @@ const Container = styled.div`
   height: calc(100% - 50px);
   background-color: rgb(66, 54, 48);
   padding-top: 25px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-content: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding-bottom: 25px;
 `;
 
@@ -24,30 +24,30 @@ const Contents = styled.img`
 
 const MiniContents = styled.img`
   width: 18px;
-  height:18px;
+  height: 18px;
   margin-left: 26px;
-  margin-top:8px;
-  margin-bottom:8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `;
 
 export default function MenuBar() {
   return (
     <Container>
       <div>
-       <Link to="/">
-          <Contents src={process.env.PUBLIC_URL + 'person.png'} />
-       </Link>
+        <Link to="/">
+          <Contents src={process.env.PUBLIC_URL + '/person.png'} />
+        </Link>
         <Link to="/chatlist">
-          <Contents src={process.env.PUBLIC_URL + 'chat.png'} />
+          <Contents src={process.env.PUBLIC_URL + '/chat.png'} />
         </Link>
         <Link to="/setting">
-          <Contents src={process.env.PUBLIC_URL + 'setting.png'} />
+          <Contents src={process.env.PUBLIC_URL + '/setting.png'} />
         </Link>
       </div>
       <div>
-        <MiniContents src={process.env.PUBLIC_URL + `calendar.png`}/>
-        <MiniContents src={process.env.PUBLIC_URL + `bell.png`}/>
-        <MiniContents src={process.env.PUBLIC_URL + `settingImg.png`}/>
+        <MiniContents src={process.env.PUBLIC_URL + `/calendar.png`} />
+        <MiniContents src={process.env.PUBLIC_URL + `/bell.png`} />
+        <MiniContents src={process.env.PUBLIC_URL + `/settingImg.png`} />
       </div>
     </Container>
   );

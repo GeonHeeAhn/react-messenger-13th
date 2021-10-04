@@ -88,7 +88,7 @@ export default function (props) {
     <ProfileItem>
       <Header>
         <Time>{time}</Time>
-        <Battery src={process.env.PUBLIC_URL + 'battery.png'} />
+        <Battery src={process.env.PUBLIC_URL + '/battery.png'} />
       </Header>
       <LeftThings onClick={props.clickProfile}>
         <ChangeableProfile>
@@ -98,7 +98,7 @@ export default function (props) {
             <State>현재 활동 중</State>
           </NameItem>
         </ChangeableProfile>
-        <Image src={process.env.PUBLIC_URL + 'myMelody-profile.png'} />
+        <Image src={process.env.PUBLIC_URL + '/myMelody-profile.png'} />
       </LeftThings>
     </ProfileItem>
   );
